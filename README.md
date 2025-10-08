@@ -10,12 +10,12 @@
 #### 扩散模型基础理论
 - DDPM
 - VDM：相比于DDPM，引入了连续时间下的扩散过程，并通过直接优化ELBO对模型进行训练。
-- [[SDE Diffusion]]
+- [SDE Diffusion](SDE_Diffusion.md)
 - Optimal Transport
 - Flow matching
 
 #### 扩散条件注入
-- [[DPS]]
+- [DPS](DPS.md)
 - CFG
 - ControlNet
 

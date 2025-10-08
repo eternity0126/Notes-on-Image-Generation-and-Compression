@@ -11,14 +11,14 @@
             "id": "c386d3e4dc9f2f45",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".gitignore",
+                "bFile": ".gitignore",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "diff",
+              "title": "Diff: .gitignore"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -183,9 +183,10 @@
   },
   "active": "c386d3e4dc9f2f45",
   "lastOpenFiles": [
-    "DPS.md",
     "README.md",
-    "SDE Diffusion.md",
+    "SDE_Diffusion.md",
+    "SDE.md",
+    "DPS.md",
     "欢迎.md"
   ]
 }
