@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c5281f5a2c679b2b",
+        "id": "ec8ea662d7bde82b",
         "type": "tabs",
         "children": [
           {
-            "id": "f12b4d32bd7f5eb9",
+            "id": "371830a81c390295",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "be0477cb8b24f7db",
@@ -181,17 +176,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f12b4d32bd7f5eb9",
+  "active": "834b7771fc1ee686",
   "lastOpenFiles": [
+    "未命名.base",
     "README.md",
-    "SDE_Diffusion.md",
-    "Flow_Matching.md",
-    "DDPM.md",
-    "DiffC.md",
-    "VDM.md",
-    "Classifier_Free_Guidance.md",
-    "Guided_Diffusion.md",
-    "DPS.md",
+    "Basic/DDPM.md",
+    "Sampling/DPS.md",
+    "Sampling",
+    "Compression",
+    "Conditional.md",
+    "Conditional_Diffusion/Guided_Diffusion.md",
+    "Conditional_Diffusion",
+    "Basic",
+    "Basic/VDM.md",
+    "Basic/SDE_Diffusion.md",
+    "Basic/Flow_Matching.md",
+    "Compression/DiffC.md",
+    "Conditional_Diffusion/Classifier_Free_Guidance.md",
     "SDE.md",
     "欢迎.md"
   ]

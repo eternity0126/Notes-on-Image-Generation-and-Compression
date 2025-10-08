@@ -74,4 +74,4 @@ $$
 $$
 \mathcal{J}\leq \frac{d}{\sqrt{2\pi\sigma^2}}e^{-1/2\sigma^2}||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||m_1
 $$，其中$||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||:=\max_{\boldsymbol{x}}||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$，$m_1:=\int||\boldsymbol{x}_0-\hat{\boldsymbol{x}}_0||p(\boldsymbol{x}_0|\boldsymbol{x}_t)d\boldsymbol{x}_0$。
-从该公式得到的推论为，当$||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$与$m_1$都是有界的时候，Jensen误差随着$\sigma\rightarrow 0$时逐渐趋于0，即近似误差随着测量早上的增长而降低。
+从该公式得到的推论为，当$||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$与$m_1$都是有界的时候，Jensen误差随着$\sigma\rightarrow 0$时逐渐趋于0，即近似误差随着测量噪声的增长而降低。
