@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic/SDE_Diffusion.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SDE_Diffusion"
+              "title": "README"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "059ecf34737b43ff",
   "lastOpenFiles": [
+    "Basic/SDE_Diffusion.md",
     "Sampling/DPS.md",
     "README.md",
     "未命名.base",
@@ -194,7 +195,6 @@
     "Conditional_Diffusion",
     "Basic",
     "Basic/VDM.md",
-    "Basic/SDE_Diffusion.md",
     "Basic/Flow_Matching.md",
     "Compression/DiffC.md",
     "Conditional_Diffusion/Classifier_Free_Guidance.md",

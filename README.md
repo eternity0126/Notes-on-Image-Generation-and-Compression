@@ -14,7 +14,7 @@
 - [Flow matching](Basic/Flow_Matching.md)
 
 #### 推理采样
-- [DPS](Sampling/DPS.md)：使用$p(\mathbf{y}|\hat{\mathbf{x}} _0)$近似$p(\mathbf{y}|\mathbf{x} _t)$优化后验采样。
+- [DPS](Sampling/DPS.md)：使用 $p(\mathbf{y}|\hat{\mathbf{x}} _0)$近似 $p(\mathbf{y}|\mathbf{x} _t)$优化后验采样。
 
 #### 生成控制
 - [Classifier guidance](Conditional_Diffusion/Guided_Diffusion.md)
@@ -23,5 +23,5 @@
 - IP-Adapter
 
 ### 图像压缩
-- [VDM](Basic/VDM.md)：由于直接优化对数似然$\log p(\boldsymbol{x})$，可以结合算数编码或者ANS实现实现针对图像的无损压缩。
+- [VDM](Basic/VDM.md)：由于直接优化对数似然 $\log p(\boldsymbol{x})$，可以结合算数编码或者ANS实现实现针对图像的无损压缩。
 - [DiffC](Compression/DiffC.md)：使用扩散模型结合随机编码实现了图像有损压缩。2025年ICLR论文的实现提升了编解码器效率，验证了预训练的扩散模型可以实现zero-shot的图像有损压缩。
