@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Guided_Diffusion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Guided_Diffusion"
             }
           }
         ]
@@ -166,8 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,8 +182,8 @@
   },
   "active": "f12b4d32bd7f5eb9",
   "lastOpenFiles": [
-    "DPS.md",
     "README.md",
+    "DPS.md",
     "Guided_Diffusion.md",
     "SDE_Diffusion.md",
     "SDE.md",
