@@ -1,3 +1,4 @@
+<center><font size=5>有关图像生成和图像压缩的论文阅读笔记</font></center>
 笔记使用[Obsidian](https://obsidian.md/)创建，使用的插件包含Git、PseudoCode。
 
 本仓库的笔记主要记录了图像生成领域以及基于生成模型实现的图像压缩的相关论文。

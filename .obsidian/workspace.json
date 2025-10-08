@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "有关图像生成和图像压缩的论文阅读笔记.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "有关图像生成和图像压缩的论文阅读笔记"
+              "title": "README"
             }
           }
         ]
@@ -163,12 +163,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,7 +184,7 @@
   "active": "c386d3e4dc9f2f45",
   "lastOpenFiles": [
     "DPS.md",
-    "有关图像生成和图像压缩的论文阅读笔记.md",
+    "README.md",
     "SDE Diffusion.md",
     "欢迎.md"
   ]
