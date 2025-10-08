@@ -1,0 +1,1 @@
+[Variational Diffusion Models](https://arxiv.org/pdf/2107.00630)
