@@ -32,7 +32,7 @@ $$
 d\boldsymbol{x}=\left[-\frac{\beta(t)}{2}\boldsymbol{x}-\beta(t)(\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)+\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{y}|\boldsymbol{x}_t))\right]dt+\sqrt{\beta(t)}d\overline{\boldsymbol{w}}
 $$
 
-其中分数函数 $\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)$可以使用预训练好的模型预测，即 $s_{\theta^*}$。
+其中分数函数 $\nabla _{\boldsymbol{x} _t}\log p _t(\boldsymbol{x} _t)$可以使用预训练好的模型预测，即 $s_{\theta^*}$。
 
 $$
 \begin{aligned}
@@ -62,7 +62,7 @@ $$
 \mathcal{J}\leq \frac{d}{\sqrt{2\pi\sigma^2}}e^{-1/2\sigma^2}\Vert\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})\Vert m_1
 $$
 
-，其中 $||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert:=\max_{\boldsymbol{x}} \Vert \nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$， $m_1:=\int \Vert \boldsymbol{x}_0-\hat{\boldsymbol{x}}_0 \Vert p(\boldsymbol{x}_0|\boldsymbol{x}_t)d\boldsymbol{x}_0$。
+，其中 $||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert:=\max_{\boldsymbol{x}} \Vert \nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert$， $m_1:=\int \Vert \boldsymbol{x}_0-\hat{\boldsymbol{x}}_0 \Vert p(\boldsymbol{x}_0|\boldsymbol{x}_t)d\boldsymbol{x}_0$。
 从该公式得到的推论为，当 $\Vert \nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert$与 $m_1$都是有界的时候，Jensen误差随着 $\sigma\rightarrow 0$时逐渐趋于0，即近似误差随着测量噪声的增长而降低。
 
 对应的采样方式为
