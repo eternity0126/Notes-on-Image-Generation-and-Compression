@@ -32,7 +32,7 @@ $$
 d\boldsymbol{x}=\left[-\frac{\beta(t)}{2}\boldsymbol{x}-\beta(t)(\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)+\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{y}|\boldsymbol{x}_t))\right]dt+\sqrt{\beta(t)}d\overline{\boldsymbol{w}}
 $$
 
-其中分数函数 $\nabla _{\boldsymbol{x} _t}\log p _t(\boldsymbol{x} _t)$可以使用预训练好的模型预测，即 $s_{\theta^*}$。
+其中分数函数 $\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)$可以使用预训练好的模型预测，即 $s_{\theta^*}$。
 
 $$
 \begin{aligned}
