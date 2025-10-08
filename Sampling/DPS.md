@@ -26,7 +26,7 @@ $$
 d\boldsymbol{x}=\left[-\frac{\beta(t)}{2}\boldsymbol{x}-\beta(t)\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)\right]dt+\sqrt{\beta(t)}d\overline{\boldsymbol{w}}
 $$
 
-在有条件限制的情况下，使用扩散模型预测先验概率时，需要将上述式子中的 $p_t(\boldsymbol{x}_t)$替换为$p_t(\boldsymbol{x}_t|\boldsymbol{y})$：
+在有条件限制的情况下，使用扩散模型预测先验概率时，需要将上述式子中的 $p_t(\boldsymbol{x}_t)$替换为 $p_t(\boldsymbol{x}_t|\boldsymbol{y})$：
 
 $$
 d\boldsymbol{x}=\left[-\frac{\beta(t)}{2}\boldsymbol{x}-\beta(t)(\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)+\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{y}|\boldsymbol{x}_t))\right]dt+\sqrt{\beta(t)}d\overline{\boldsymbol{w}}
@@ -42,6 +42,7 @@ p(\boldsymbol{y}|\boldsymbol{x}_t)
 &=\mathbb{E}_{\boldsymbol{x}_0\sim p(\boldsymbol{x}_0|\boldsymbol{x}_t)}p(\boldsymbol{y}|\boldsymbol{x}_0)
 \end{aligned}
 $$
+
 使用 $p(\boldsymbol{y}|\hat{\boldsymbol{x}}_0)$近似 $p(\boldsymbol{y}|\boldsymbol{x}_t)$，其中
 
 $$
@@ -58,11 +59,11 @@ $$
 针对 $\boldsymbol{n}\sim\mathcal{N}(0,\sigma^2\boldsymbol{I})$的情况，使用DPS进行后验近似，得到的Jensen误差满足
 
 $$
-\mathcal{J}\leq \frac{d}{\sqrt{2\pi\sigma^2}}e^{-1/2\sigma^2}||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||m_1
+\mathcal{J}\leq \frac{d}{\sqrt{2\pi\sigma^2}}e^{-1/2\sigma^2}\Vert\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})\Vert m_1
 $$
 
-，其中 $||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||:=\max_{\boldsymbol{x}}||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$， $m_1:=\int||\boldsymbol{x}_0-\hat{\boldsymbol{x}}_0||p(\boldsymbol{x}_0|\boldsymbol{x}_t)d\boldsymbol{x}_0$。
-从该公式得到的推论为，当 $||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$与 $m_1$都是有界的时候，Jensen误差随着 $\sigma\rightarrow 0$时逐渐趋于0，即近似误差随着测量噪声的增长而降低。
+，其中 $||\nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert:=\max_{\boldsymbol{x}} \Vert \nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x})||$， $m_1:=\int \Vert \boldsymbol{x}_0-\hat{\boldsymbol{x}}_0 \Vert p(\boldsymbol{x}_0|\boldsymbol{x}_t)d\boldsymbol{x}_0$。
+从该公式得到的推论为，当 $\Vert \nabla_{\boldsymbol{x}}\mathcal{A}(\boldsymbol{x}) \Vert$与 $m_1$都是有界的时候，Jensen误差随着 $\sigma\rightarrow 0$时逐渐趋于0，即近似误差随着测量噪声的增长而降低。
 
 对应的采样方式为
 ```pseudo
@@ -79,7 +80,7 @@ $$
     
     \State $\boldsymbol{x}_{i-1}'\leftarrow \frac{\sqrt{\alpha_i}(1-\overline{\alpha}_{i-1})}{1-\overline{\alpha}_i}\boldsymbol{x}_i+\frac{\sqrt{\overline{\alpha}_{i-1}}\beta_i}{1-\overline{\alpha}_i}\hat{\boldsymbol{x}}_0+\tilde{\sigma}_i\boldsymbol{z}$
     
-    \STATE $\boldsymbol{x}_{i-1}\leftarrow \boldsymbol{x}_{i-1}'-\zeta_i\nabla_{\boldsymbol{x}_i}||\boldsymbol{y}-\mathcal{A}(\hat{\boldsymbol{x}}_0)||_2^2$
+    \STATE $\boldsymbol{x}_{i-1}\leftarrow \boldsymbol{x}_{i-1}'-\zeta_i\nabla_{\boldsymbol{x}_i} \Vert \boldsymbol{y}-\mathcal{A}(\hat{\boldsymbol{x}}_0)\Vert_2^2$
     \EndFor
     \Return $\hat{\boldsymbol{x}}_0$
 	\end{algorithmic}
