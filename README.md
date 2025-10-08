@@ -14,7 +14,7 @@
 - [Flow matching](Basic/Flow_Matching.md)
 
 #### 推理采样
-- [DPS](Sampling/DPS.md)：使用 $p(\mathbf{y}|\hat{\mathbf{x}} _0)$近似 $p(\mathbf{y}|\mathbf{x} _t)$优化后验采样。
+- [DPS](Sampling/DPS.md)：使用 $p(\boldsymbol{y}|\hat{\boldsymbol{x}} _0)$近似 $p(\boldsymbol{y}|\boldsymbol{x} _t)$优化后验采样。
 
 #### 生成控制
 - [Classifier guidance](Conditional_Diffusion/Guided_Diffusion.md)
