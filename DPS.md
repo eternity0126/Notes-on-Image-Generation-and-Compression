@@ -10,11 +10,15 @@ $$
 其中$x$为原始信息，$y$为观测到的信息。
 当$\mathcal{A}(x)\triangleq \boldsymbol{A}\boldsymbol{x}$时为linear inverse problems，包含图像修复、去除高斯噪声、超分辨率、去除运动模糊等任务。
 nonlinear inverse problems包含相位恢复、去除非线性噪声等任务。
-### Score-
-如果想从$p(x|y)$中采样，则可以使用$\nabla_{x}\log p(y|x)$实现。
+### Score-based Diffusion Models
+基于SDE的扩散定义为
+$$
+d\boldsymbol{x}=-\frac{\beta(t)}{2}\boldsymbol{x}dt+\sqrt{\beta(t)}d\boldsymbol{w}
+$$
+如果想从$p(\boldsymbol{x}|\boldsymbol{y})$中采样，则可以使用$\nabla_{\boldsymbol{x}}\log p(\boldsymbol{y}|\boldsymbol{x})$实现。
 SDE的反向过程：
 $$
-d\mathbf{x}=\left[-\frac{\beta(t)}{2}\mathbf{x}-\beta(t)\nabla_{\mathbf{x}_t}\log p_t(\mathbf{x}_t)\right]dt+\sqrt{\beta(t)}d\overline{\mathbf{w}}
+d\boldsymbol{x}=\left[-\frac{\beta(t)}{2}\boldsymbol{x}-\beta(t)\nabla_{\boldsymbol{x}_t}\log p_t(\boldsymbol{x}_t)\right]dt+\sqrt{\beta(t)}d\overline{\boldsymbol{w}}
 $$
 
 在有条件限制的情况下，使用扩散模型预测先验概率时，需要将上述式子中的$p_t(\mathbf{x}_t)$替换为$p_t(\mathbf{x}_t|\mathbf{y})$：
