@@ -8,8 +8,8 @@ $$
 \boldsymbol{y}=\mathcal{A}(\boldsymbol{x})+\boldsymbol{n},\quad \boldsymbol{y},\boldsymbol{n}\in\mathbb{R}^n,\boldsymbol{x}_0\in\mathbb{R}^d
 $$
 其中$x$为原始信息，$y$为观测到的信息。
-当$\mathcal{A}(x)\triangleq \boldsymbol{A}\boldsymbol{x}$时为linear inverse problems，包含图像修复、去除高斯噪声、超分辨率、去除运动模糊等
-nonlinear inverse problems包含相位恢复、去除非线性噪声等。
+当$\mathcal{A}(x)\triangleq \boldsymbol{A}\boldsymbol{x}$时为linear inverse problems，包含图像修复、去除高斯噪声、超分辨率、去除运动模糊等任务。
+nonlinear inverse problems包含相位恢复、去除非线性噪声等任务。
 
 如果想从$p(x|y)$中采样，则可以使用$\nabla_{x}\log p(y|x)$实现。
 SDE的反向过程：
