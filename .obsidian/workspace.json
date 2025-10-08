@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ec8ea662d7bde82b",
+        "id": "a163f7e73e1ea411",
         "type": "tabs",
         "children": [
           {
-            "id": "371830a81c390295",
+            "id": "059ecf34737b43ff",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "be0477cb8b24f7db",
@@ -180,12 +181,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "371830a81c390295",
+  "active": "059ecf34737b43ff",
   "lastOpenFiles": [
+    "Sampling/DPS.md",
     "未命名.base",
     "README.md",
     "Basic/DDPM.md",
-    "Sampling/DPS.md",
     "Sampling",
     "Compression",
     "Conditional.md",
