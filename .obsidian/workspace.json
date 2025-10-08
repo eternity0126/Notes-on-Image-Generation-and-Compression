@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5f8fb5c5fbbaff38",
+        "id": "c5281f5a2c679b2b",
         "type": "tabs",
         "children": [
           {
-            "id": "c386d3e4dc9f2f45",
+            "id": "f12b4d32bd7f5eb9",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
-                "aRef": ""
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: .gitignore"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "be0477cb8b24f7db",
@@ -167,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,12 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c386d3e4dc9f2f45",
+  "active": "f12b4d32bd7f5eb9",
   "lastOpenFiles": [
+    "DPS.md",
     "README.md",
+    "Guided_Diffusion.md",
     "SDE_Diffusion.md",
     "SDE.md",
-    "DPS.md",
     "欢迎.md"
   ]
 }
