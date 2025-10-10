@@ -1,5 +1,5 @@
 # 有关图像生成和图像压缩的论文阅读笔记
-笔记使用[Obsidian](https://obsidian.md/)创建，使用的插件包含Git、PseudoCode。建议使用Obsidian查看。
+笔记使用[Obsidian](https://obsidian.md/)创建，使用的插件包含[Git](https://github.com/Vinzent03/obsidian-git)、[PseudoCode](https://github.com/ytliu74/obsidian-pseudocode)、[Custom Attachment Location](https://github.com/RainCat1998/obsidian-custom-attachment-location)。建议使用Obsidian查看。
 
 本仓库的笔记主要记录了图像生成领域以及基于生成模型实现的图像压缩的相关论文。
 
@@ -13,7 +13,7 @@
 - [Flow matching](Basic/Flow_Matching.md)
 
 #### 推理采样
-- [DPS](Sampling/DPS.md)：使用 $p(\boldsymbol{y}|\hat{\boldsymbol{x}} _0)$近似 $p(\boldsymbol{y}|\boldsymbol{x} _t)$优化后验采样。
+- [DPS](Sampling/DPS.md)：![[DPS#^bb1456]]
 
 #### 生成控制
 - [Classifier guidance](Conditional_Diffusion/Guided_Diffusion.md)
