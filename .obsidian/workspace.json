@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DPS.md",
+                "file": "Compression/DiffC.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DPS 的大纲"
+              "title": "DiffC 的大纲"
             }
           },
           {
@@ -180,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4c59e95c239b642e",
+  "active": "6cceb49796e2f374",
   "lastOpenFiles": [
     "Sampling/DDIM.md",
     "Sampling/DPS.md",
