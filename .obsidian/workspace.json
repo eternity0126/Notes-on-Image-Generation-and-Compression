@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sampling/DPS.md",
+                "file": "Compression/DiffC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DPS"
+              "title": "DiffC"
             }
           }
         ]
@@ -166,8 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,9 +182,9 @@
   },
   "active": "4c59e95c239b642e",
   "lastOpenFiles": [
-    "Compression/DiffC.md",
     "Sampling/DDIM.md",
     "Sampling/DPS.md",
+    "Compression/DiffC.md",
     "Conditional_Diffusion/Guided_Diffusion.md",
     "Conditional_Diffusion/Classifier_Free_Guidance.md",
     "README.md",
