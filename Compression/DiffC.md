@@ -1,5 +1,9 @@
 Paper1:[LOSSY COMPRESSION WITH GAUSSIAN DIFFUSION](https://arxiv.org/pdf/2206.08889)
 Paper2:[LOSSY COMPRESSION WITH PRETRAINED DIFFUSION MODELS](https://arxiv.org/pdf/2501.09815)
+
+### 摘要
+使用扩散过程实现结合随机编码实现了图像的有损压缩。
+
 ### Reverse Channel Coding
 发送采样$x\sim q(x)$，接收方共享一个已知的分布$p(x)$（如高斯分布），则传输$x$的最小代价为$D_ {\text{KL}}(q \Vert p)$。
 目前RCC最好的实现为PFR算法，编码代价最大为

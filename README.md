@@ -9,7 +9,7 @@
 #### 扩散模型基础理论
 - [DDPM](Basic/DDPM.md)：继GAN之后的图像生成的基本范式。
 - [VDM](Basic/VDM.md)：相比于DDPM，引入了连续时间下的扩散过程，并通过直接优化ELBO对模型进行训练。
-- [SDE diffusion](Basic/SDE_Diffusion.md)：通过使用随机微分方程将NCSN（VE-SDE）和DDPM（VP-SDE）统一起来。
+- [SDE diffusion](Basic/SDE_Diffusion.md)：![[SDE_Diffusion#^83fdd9]]
 - [Flow matching](Basic/Flow_Matching.md)
 
 #### 推理采样

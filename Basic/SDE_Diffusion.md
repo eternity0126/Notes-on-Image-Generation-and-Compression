@@ -1,14 +1,7 @@
 [SCORE-BASED GENERATIVE MODELING THROUGH STOCHASTIC DIFFERENTIAL EQUATIONS](https://arxiv.org/pdf/2011.13456)
 
-
-对于VP-SDE也即DDPM，有
-
-$$
-d\mathbf{x}=-\frac{1}{2}\beta(t)\mathbf{x}dt+\sqrt{\beta(t)}d\mathbf{w}
-$$
-$$
-d\mathbf{x}=\left[-\frac{\beta(t)}{2}\mathbf{x}-\beta(t)\nabla_{\mathbf{x}_t}\log p_t(\mathbf{x}_t)\right]dt+\sqrt{\beta(t)}d\overline{\mathbf{w}}
-$$
+### 摘要
+通过使用随机微分方程将NCSN（VE-SDE）和DDPM（VP-SDE）统一起来。 ^83fdd9
 
 ### Score-based Diffusion Models
 使用随机微分方程（SDE，Stochastic Differential Equation)表述扩散过程。其中前向过程为
