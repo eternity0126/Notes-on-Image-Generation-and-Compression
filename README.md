@@ -7,15 +7,14 @@
 
 ### 图像生成
 #### 扩散模型基础理论
-- [DDPM](Basic/DDPM.md)：继GAN之后的图像生成的基本范式。
-- [VDM](Basic/VDM.md)：相比于DDPM，引入了连续时间下的扩散过程，并通过直接优化ELBO对模型进行训练。
+- [DDPM](Basic/DDPM.md)：![[DDPM#^31843c]]
+- [VDM](Basic/VDM.md)：![[VDM#^30abaa]]
 - [SDE diffusion](Basic/SDE_Diffusion.md)：![[SDE_Diffusion#^83fdd9]]
 - [Flow matching](Basic/Flow_Matching.md)
 
-#### 推理采样
-- [DPS](Sampling/DPS.md)：![[DPS#^bb1456]]
 
 #### 生成控制
+- [DPS](DPS.md)：![[DPS#^bb1456]]
 - [Classifier guidance](Conditional_Diffusion/Guided_Diffusion.md)
 - [Classifier-free guidance](Classifier_Free_Guidance.md)
 - ControlNet

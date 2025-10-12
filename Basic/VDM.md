@@ -1,7 +1,7 @@
 [Variational Diffusion Models](https://arxiv.org/pdf/2107.00630)
 
 ### 摘要
-将扩散过程的schedule使用signal-to-noise ratio进行表示，并直接使用VLB即$\log p(\boldsymbol{x})$作为损失函数进行优化。同时结合了bits-back coding实现了图像无损压缩。
+将扩散过程的schedule使用signal-to-noise ratio进行表示，并直接使用VLB即$\log p(\boldsymbol{x})$作为损失函数进行优化。同时结合了bits-back coding实现了图像无损压缩。 ^30abaa
 
 ### 扩散过程
 #### 前向过程
