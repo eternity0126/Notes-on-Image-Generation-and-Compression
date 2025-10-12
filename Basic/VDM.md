@@ -13,7 +13,7 @@ $$
 $$
 \text{SNR}=\frac{\alpha_{t}^2}{\sigma_{t}^2}
 $$
-满足对任意$t>s$，有$\text{SNR}(t)<\text{SNR}(s)$。后续着重分析[[VP-SDE]]的情况，即$\alpha_{t}^2+\sigma_{t}^2=1$。
+满足对任意$t>s$，有$\text{SNR}(t)<\text{SNR}(s)$。后续着重分析[[SDE_Diffusion#^7a2a2d|VP-SDE]]的情况，即$\alpha_{t}^2+\sigma_{t}^2=1$。
 
 #### Noise Schedule
 基于SNR的定义，使用可学习的schedule

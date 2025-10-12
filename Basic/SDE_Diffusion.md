@@ -17,6 +17,8 @@ $$
 d\boldsymbol{x}=-\frac{\beta(t)}{2}\boldsymbol{x}dt+\sqrt{\beta(t)}d\boldsymbol{w}
 $$
 
+^7a2a2d
+
 反向过程为
 
 $$
