@@ -19,14 +19,34 @@ $$
 
 ^2936e5
 
-前向扩散过程支持任意时间步的采样，使用$\alpha_{t}:=1-\beta_{t}$以及$\overline{\alpha}_{t}:=\prod_{s=1}^t\alpha_{s}$，有
+DDPM的前向加噪过程服从马尔可夫链，是一个正态转移概率，形式为
+$$
+q(\boldsymbol{x}_{t}|\boldsymbol{x}_{t-1})=\sqrt{ 1-\beta_{t}}\boldsymbol{x}_{t-1}+\sqrt{ \beta_{t} }\epsilon_{t}\sim \mathcal{N}(\sqrt{ 1-\beta_{t} }\boldsymbol{x}_{t-1},\beta_{t}\boldsymbol{I})
+$$
+
+^0ce7ed
+
+通过**马尔可夫性质**，**前向扩散过程支持任意时间步的采样**，使用$\alpha_{t}:=1-\beta_{t}$以及$\overline{\alpha}_{t}:=\prod_{s=1}^t\alpha_{s}$，有
 $$
 q(\boldsymbol{x}_{t}|\boldsymbol{x}_{0})=\mathcal{N}(\boldsymbol{x}_{t};\sqrt{ \overline{\alpha}_{t}}\boldsymbol{x}_{0},(1-\overline{\alpha}_{t})\boldsymbol{I})
 $$
 
 ^34fb76
 
-从而可以推导出后验分布：
+逆向$q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{t})$，根据贝叶斯公式，可以求出
+$$
+q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{t})=\frac{q(\boldsymbol{x}_{t}|\boldsymbol{x}_{t-1})q(\boldsymbol{x}_{t-1})}{q(\boldsymbol{x}_{t})}
+$$
+这里可以发现$q(\boldsymbol{x}_{t-1})$和$q(\boldsymbol{x}_{t})$无法直接求出。但是添加条件$\boldsymbol{x}_{0}$时，可以推导出
+$$
+q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{t},\boldsymbol{x}_{0})=\frac{q(\boldsymbol{x}_{t}|\boldsymbol{x}_{t-1},\boldsymbol{x}_{0})q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{0})}{q(\boldsymbol{x}_{t}|\boldsymbol{x}_{0})}
+\xlongequal{\text{Markov}}
+\frac{q(\boldsymbol{x}_{t}|\boldsymbol{x}_{t-1})q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{0})}{q(\boldsymbol{x}_{t}|\boldsymbol{x}_{0})}
+$$
+
+^cc26e0
+
+在$q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{t},\boldsymbol{x}_{0})$已知的情况下，可以根据重参数化采样，在$\boldsymbol{x}_{t}$和$\boldsymbol{x}_{0}$已知的情况下求出$\boldsymbol{x}_{t-1}$的值。
 $$
 q(\boldsymbol{x}_{t-1}|\boldsymbol{x}_{t},\boldsymbol{x}_{0})=\mathcal{N}\left(\boldsymbol{x}_{t-1};\frac{\sqrt{ \overline{\alpha}_{t-1} }\beta_{t}}{1-\overline{\alpha}_{t}}\boldsymbol{x}_{0}+\frac{\sqrt{ \alpha_{t} }(1-\overline{\alpha}_{t-1})}{1-\overline{\alpha}_{t}}\boldsymbol{x}_{t},\frac{1-\overline{\alpha}_{t-1}}{1-\overline{\alpha}_{t}}\beta_{t}\right)
 $$
@@ -56,8 +76,11 @@ L_{t-1}-C=\mathbb{E}_{\boldsymbol{x}_{0},\boldsymbol{\epsilon}}\left[\frac{\beta
 $$
 忽略加权系数，最终训练使用的损失函数为
 $$
-L_{\text{simple}}(\theta):=\mathbb{E}_{t,\boldsymbol{x}_{0},\boldsymbol{\epsilon}}\left[\Vert\boldsymbol{\epsilon}-\boldsymbol{\epsilon}_{\theta}(\sqrt{ \overline{\alpha}_{t} }\boldsymbol{x}_{0}+\sqrt{ 1-\overline{\alpha}_{t} }\boldsymbol{\epsilon},t) \Vert^2 \right]
+L_{\text{simple}}(\theta):=\mathbb{E}_{t,\boldsymbol{x}_{0},\boldsymbol{\epsilon}}\left[\Vert\boldsymbol{\epsilon}-\boldsymbol{\epsilon}_{\theta}(\sqrt{ \overline{\alpha}_{t} }\boldsymbol{x}_{0}+\sqrt{ 1-\overline{\alpha}_{t} }\boldsymbol{\epsilon},t) \Vert_{2}^2 \right]
 $$
+
+^a4f030
+
 在更大时间步的情况下，原始的$L_{t-1}$的加权系数会更小，忽略加权系数的作用则能使模型更好地关注大时间步情况下的噪声预测。论文也通过实验分析出预测噪声$\boldsymbol{\epsilon}$相比预测$\tilde{\boldsymbol{\mu}}_{t}$在使用不加权损失函数$L_{\text{simple}}(\theta)$会有更好的生成效果。
 
 ### 模型训练

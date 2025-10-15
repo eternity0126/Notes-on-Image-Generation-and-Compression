@@ -8,6 +8,10 @@
 $$
 d\boldsymbol{x}=\boldsymbol{f}(\boldsymbol{x},t)dt+g(t)d\boldsymbol{w}
 $$
+使用$\Delta t$表示，可以写成
+$$
+\boldsymbol{x}_{t+\Delta t}-\boldsymbol{x}_{t}=\boldsymbol{f}(\boldsymbol{x},t)\Delta t+g(t)\sqrt{ \Delta t }\epsilon
+$$
 反向过程为
 $$
 d\boldsymbol{x}=[\boldsymbol{f}(\boldsymbol{x},t)-g^2(t) \nabla a_ {\boldsymbol{x}}\log p_ {t}(\boldsymbol{x})]dt+g(t)d\overline{\boldsymbol{w}}
