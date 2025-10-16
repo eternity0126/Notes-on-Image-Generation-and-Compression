@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic/SDE_Diffusion.md",
+                "file": "Basic/Consistency_Models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SDE_Diffusion"
+              "title": "Consistency_Models"
             }
           },
           {
@@ -238,6 +238,8 @@
   },
   "active": "2b66f3cff039dec4",
   "lastOpenFiles": [
+    "Basic/SDE_Diffusion.md",
+    "Basic/Consistency_Models.md",
     "Basic/Flow_Matching.md",
     "Basic/DDPM.md",
     "Basic/DDIM.md",
@@ -250,7 +252,6 @@
     "Conditional_Diffusion/DPS.md",
     "Conditional_Diffusion/Classifier_Free_Guidance.md",
     "Compression/DiffC.md",
-    "Basic/SDE_Diffusion.md",
     "VP-SDE.md",
     "DDPM^.md",
     "未命名.base",
